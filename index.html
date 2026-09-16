@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<title>Nuraan — Chapter 21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="vignette"></div>
+
+<div class="stage" id="stage">
+
+  <!-- ============ INTRO ============ -->
+  <section class="screen screen--intro is-active" data-screen="intro">
+    <div class="intro-mark">NURAAN</div>
+    <h1 class="intro-title">CHAPTER 21</h1>
+    <p class="intro-sub">10 voice notes. One birthday.<br>A chapter worth remembering.</p>
+    <button class="begin-btn" id="beginBtn">
+      <span class="begin-line"></span>
+      <span>BEGIN</span>
+      <span class="begin-line"></span>
+    </button>
+  </section>
+
+  <!-- ============ CHAPTER TEMPLATE (x10) generated below ============ -->
+  <div id="chaptersRoot"></div>
+
+  <!-- ============ PHOTO TEMPLATE (x5) generated below ============ -->
+  <div id="photosRoot"></div>
+
+  <!-- ============ FINAL SEQUENCE ============ -->
+  <section class="screen screen--final" data-screen="final">
+    <div class="final-line final-line--name" data-delay="0">END OF CHAPTER 21</div>
+    <div class="final-line final-line--sub" data-delay="1">But this isn&rsquo;t the end<br>of your story.</div>
+    <div class="final-line final-line--happy" data-delay="2">Happy 21st, Nuraan. 🤍</div>
+    <button class="continue-btn final-continue" data-delay="3" data-goto="letter">CONTINUE</button>
+  </section>
+
+  <!-- ============ LETTER ============ -->
+  <section class="screen screen--letter" data-screen="letter">
+    <div class="letter-closed" id="letterClosed">
+      <p class="letter-eyebrow">ONE LAST THING</p>
+      <button class="open-btn" id="openLetterBtn">OPEN</button>
+    </div>
+    <div class="letter-open" id="letterOpen">
+      <div class="letter-paper">
+        <p class="letter-salutation">Dear Nuraan,</p>
+        <p class="letter-body">Twenty-one only happens once.</p>
+        <p class="letter-body letter-editable" id="letterMessage">[ Replace this line in index.html with your personal message to Nuraan. ]</p>
+        <p class="letter-body">Happy 21st.</p>
+        <p class="letter-sign">— Joshua</p>
+      </div>
+      <button class="continue-btn" data-goto="complete">CONTINUE</button>
+    </div>
+  </section>
+
+  <!-- ============ COMPLETE ============ -->
+  <section class="screen screen--complete" data-screen="complete">
+    <canvas id="particles" class="particles"></canvas>
+    <p class="complete-eyebrow">CHAPTER 21</p>
+    <h2 class="complete-title">COMPLETE</h2>
+    <button class="replay-btn" id="replayBtn">PLAY AGAIN</button>
+  </section>
+
+</div>
+
+<!-- ============ CHROME (progress + audio bar) ============ -->
+<div class="chrome" id="chrome">
+  <div class="chrome-top">
+    <span class="chrome-label">NURAAN / CHAPTER 21</span>
+    <span class="chrome-count" id="chromeCount">01 / 10</span>
+  </div>
+  <div class="chrome-dots" id="chromeDots"></div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
